@@ -60,7 +60,7 @@ int main(){
     int cost  = 0;
     vector<pair<int, int>> mst;
     for(auto it : edges) {
-        if(findParent(it.v, parent) != findParent(it.u, parent)) {
+        if(findParent(it.v, parent) != findParent(it.u, parent)) {             // if absolute parent of vertices are not equal
             cost += it.wt;
             mst.push_back({it.u, it.v});
             Union(it.u, it.v, parent, rank);
